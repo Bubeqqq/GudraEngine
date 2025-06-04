@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Pliki źródłowe">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Pliki zasobów">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\C--">
+      <UniqueIdentifier>{851ae724-2865-40e0-81a9-89068bb95cc2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\C--">
+      <UniqueIdentifier>{6a8494ad-9f4c-45c6-9d34-a192f209c664}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\C--\Calculator">
+      <UniqueIdentifier>{c9544194-3b02-4525-bda3-777a2fe3e113}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\C--\Calculator">
+      <UniqueIdentifier>{04381d2f-f972-43d5-b631-2a87757a6b17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki nagłówkowe\Engine">
+      <UniqueIdentifier>{3a7a716d-6955-48bb-8c12-c29763158683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pliki źródłowe\Engine">
+      <UniqueIdentifier>{1d85b003-a3fe-40c0-af2e-f554c3bc53df}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Help.h">
+      <Filter>Pliki nagłówkowe\C--\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="Load.h">
+      <Filter>Pliki nagłówkowe\C--\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="Math.h">
+      <Filter>Pliki nagłówkowe\C--\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="ShuntingYardAlgorithm.h">
+      <Filter>Pliki nagłówkowe\C--\Calculator</Filter>
+    </ClInclude>
+    <ClInclude Include="Compiler.h">
+      <Filter>Pliki nagłówkowe\C--</Filter>
+    </ClInclude>
+    <ClInclude Include="ErrorLogs.h">
+      <Filter>Pliki nagłówkowe\C--</Filter>
+    </ClInclude>
+    <ClInclude Include="FunctionManager.h">
+      <Filter>Pliki nagłówkowe\C--</Filter>
+    </ClInclude>
+    <ClInclude Include="Functions.h">
+      <Filter>Pliki nagłówkowe\C--</Filter>
+    </ClInclude>
+    <ClInclude Include="VariableManager.h">
+      <Filter>Pliki nagłówkowe\C--</Filter>
+    </ClInclude>
+    <ClInclude Include="Menu.h">
+      <Filter>Pliki nagłówkowe\Engine</Filter>
+    </ClInclude>
+    <ClInclude Include="Map.h">
+      <Filter>Pliki nagłówkowe\Engine</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Help.cpp">
+      <Filter>Pliki źródłowe\C--\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="Load.cpp">
+      <Filter>Pliki źródłowe\C--\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="Math.cpp">
+      <Filter>Pliki źródłowe\C--\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="ShuntingYardAlgorithm.cpp">
+      <Filter>Pliki źródłowe\C--\Calculator</Filter>
+    </ClCompile>
+    <ClCompile Include="Compiler.cpp">
+      <Filter>Pliki źródłowe\C--</Filter>
+    </ClCompile>
+    <ClCompile Include="ErrorLogs.cpp">
+      <Filter>Pliki źródłowe\C--</Filter>
+    </ClCompile>
+    <ClCompile Include="FunctionManager.cpp">
+      <Filter>Pliki źródłowe\C--</Filter>
+    </ClCompile>
+    <ClCompile Include="Functions.cpp">
+      <Filter>Pliki źródłowe\C--</Filter>
+    </ClCompile>
+    <ClCompile Include="VariableManager.cpp">
+      <Filter>Pliki źródłowe\C--</Filter>
+    </ClCompile>
+    <ClCompile Include="Menu.cpp">
+      <Filter>Pliki źródłowe\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Map.cpp">
+      <Filter>Pliki źródłowe\Engine</Filter>
+    </ClCompile>
+    <ClCompile Include="Main.cpp">
+      <Filter>Pliki źródłowe</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

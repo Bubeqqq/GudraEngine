@@ -1,0 +1,73 @@
+//poruszanie sie
+jezeli(klawisz['W'])
+{
+globalny liczba kierunek = 4
+}
+jezeli(klawisz['S'])
+{
+globalny liczba kierunek = 2
+}
+jezeli(klawisz['D'])
+{
+globalny liczba kierunek = 1
+}
+jezeli(klawisz['A'])
+{
+globalny liczba kierunek = 3
+}
+//dodanie jablka manualnie
+jezeli(klawisz['Q'])
+{
+ustawna[losowa[1,8]*2, losowa[1,8]*2, 'A']
+}
+globalny liczba klatka = klatka + 1
+//co ile klatek ma przemiescic sie snake
+jezeli(klatka >= 4)
+{
+globalny liczba klatka = 0
+liczba tx = x
+liczba ty = y
+jezeli(kierunek == 1)
+{
+liczba tx = x + 2
+}
+jezeli(kierunek == 2)
+{
+liczba ty = y + 1
+}
+jezeli(kierunek == 3)
+{
+liczba tx = x - 2
+}
+jezeli(kierunek == 4)
+{
+liczba ty = y - 1
+}
+//jezeli waz dotknie siebie lub sciane
+jezeli((znakna[tx, ty] == '@') lub ((znakna[tx, ty] == '#')))
+{
+zakoncz[]
+}
+wstaw[x, 0, tx]
+wstaw[y, 0, ty]
+jezeli(znakna[x, y] != 'A')
+{
+ustawna[x[rozmiar[x] - 1], y[rozmiar[y] - 1], ' ']
+usun[x, rozmiar[x] - 1]
+usun[y, rozmiar[y] - 1]
+ustawna[x, y, '@']
+}
+jezeli(znakna[x, y] == 'A')
+{
+ustawna[x, y, '@']
+//szukaj miejsca na nowe jablko
+liczba losx = losowa[1,8]*2
+liczba losy = losowa[1,8]*2
+dopoki(znakna[losx, losy] == '@')
+{
+liczba losx = losowa[1,8]*2
+liczba losy = losowa[1,8]*2
+}
+ustawna[losx, losy, 'A']
+}
+}

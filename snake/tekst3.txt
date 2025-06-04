@@ -1,0 +1,13 @@
+//wyswietl wynik
+wyczysc[]
+ustawna[0, 4, 'T']
+ustawna[1, 4, 'w']
+ustawna[2, 4, 'o']
+ustawna[3, 4, 'j']
+ustawna[0, 5, 'w']
+ustawna[1, 5, 'y']
+ustawna[2, 5, 'n']
+ustawna[3, 5, 'i']
+ustawna[4, 5, 'k']
+ustawna[5, 5, ':']
+wyswietlliczbe[6, 5, rozmiar[x]]

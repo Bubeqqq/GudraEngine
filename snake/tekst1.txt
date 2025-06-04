@@ -1,0 +1,14 @@
+globalny liczba x = 2
+globalny liczba y = 2
+globalny liczba kierunek = 2
+globalny liczba klatka = 0
+ustawwielkoscmapy[20, 20]
+ustawfps[30]
+wyczysc[]
+//ustaw sciany mapy
+linia[0, 0, 18, 0, '#']
+linia[0, 0, 0, 18, '#']
+linia[18, 0, 18, 18, '#']
+linia[0, 18, 18, 18, '#']
+//ustaw pierwsze jablko
+ustawna[losowa[3,8]*2, losowa[3,8]*2, 'A']

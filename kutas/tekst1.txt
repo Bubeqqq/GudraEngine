@@ -1,0 +1,6 @@
+ustawwielkoscmapy[10, 20]
+ustawfps[5]
+wyczysc[]
+linia[0, 0, 8, 0, '-']
+linia[0, 8, 18, 8, '-']
+linia[0, 0, 0, 18, '|']
