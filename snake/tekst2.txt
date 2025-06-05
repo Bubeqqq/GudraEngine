@@ -44,7 +44,7 @@ jezeli(kierunek == 4)
 liczba ty = y - 1
 }
 //jezeli waz dotknie siebie lub sciane
-jezeli((znakna[tx, ty] == '@') lub ((znakna[tx, ty] == '#')))
+jezeli((znakna[tx, ty] == '@') || ((znakna[tx, ty] == '#')))
 {
 zakoncz[]
 }

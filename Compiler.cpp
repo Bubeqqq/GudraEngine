@@ -11,15 +11,14 @@ Compiler::Compiler(Map* map)
 
 	//s¹ 4 typy danych: liczba, rzeczywista, znak, logiczny
 	//je¿eli dodasz globalny przed typ, zmienna jest globalna (nie usuwa siê pod koniec kodu)
-	//z ka¿dej zmiennej mo¿na zrobiæ tablicê, na górze jest przyk³ad
+	//z ka¿dej zmiennej mo¿na zrobiæ tablicê
 
-	//mo¿esz wywo³ywaæ funkcjê, tutaj test[8]
-	//w pliku FunctionManager.cpp mo¿esz dodaæ funkcjê w konstruktorze
+	//mo¿na wywo³ywaæ funkcjê
+	//w pliku FunctionManager.cpp mo¿na dodaæ funkcjê w konstruktorze
 	//je¿eli dodajesz funkcje napisz jej treœæ w Functions.cpp i zadeklaruj j¹ w Functions.h
-	//w cpp masz przyk³ad
+	//w cpp jest przyk³ad
 
 	//dodatkowo masz 2 instrukcje jezeli oraz dopoki
-
 
 	//je¿eli kompiluje siê inny kod, nale¿y ustawiæ przed tym zmienn¹ checked na false
 	//je¿eli siê tego nie ustawi, program nie sprawdza poprawnoœci kodu

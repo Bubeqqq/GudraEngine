@@ -51,6 +51,7 @@ $$ |  $$ |$$ |  $$ |$$ |  $$ |$$ |     $$  __$$ |      $$ |      $$ |  $$ |$$ | 
 		Map* map = new Map();
 		Compiler* compiler = new Compiler(map);
 
+		map->frame();
 		menu.setup(compiler);
 		compiler->checked = false;
 

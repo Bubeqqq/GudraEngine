@@ -33,9 +33,9 @@ Calculator::Calculator(VariableManager* variableManager, FunctionManager* functi
     addFunction("arccot", 5, arccotC);
     addFunction("ln", 5, LogarithmLN);
     addFunction("log", 5, Logarithm);
-    addFunction("abs", 5, absC);
-    addFunction("sqrt", 5, squareRoot);
-    addFunction("cbrt", 5, cubeRoot);
+    addFunction("bezw", 5, absC);
+    addFunction("pierw", 5, squareRoot);
+    addFunction("pszesc", 5, cubeRoot);
     addFunction("-sin", 5, MsinC);
     addFunction("-cos", 5, McosC);
     addFunction("-tan", 5, MtgC);
@@ -46,14 +46,14 @@ Calculator::Calculator(VariableManager* variableManager, FunctionManager* functi
     addFunction("-arccot", 5, MarccotC);
     addFunction("-ln", 5, MLogarithmLN);
     addFunction("-log", 5, MLogarithm);
-    addFunction("-abs", 5, MabsC);
-    addFunction("-sqrt", 5, MsquareRoot);
-    addFunction("-cbrt", 5, McubeRoot);
+    addFunction("-bezw", 5, MabsC);
+    addFunction("-pierw", 5, MsquareRoot);
+    addFunction("-pszesc", 5, McubeRoot);
 
     //logic
 
-    addFunction("oraz", 3, And);
-    addFunction("lub", 3, Or);
+    addFunction("&&", 3, And);
+    addFunction("||", 3, Or);
     addFunction("==", 3, Equal);
     addFunction("!=", 3, NotEqual);
     addFunction("nie", 5, Not);
@@ -320,7 +320,8 @@ string Calculator::calculateAnswer(stack<string>& postfix) {
             }
 
             if (!doMath(a, b, token, queue)) {
-                return "not";
+                compiler->getLogs()->pushLog(Logs::ErrorLog(Logs::LERROR, "Blad obliczeniowy", compiler->currentLine));
+                return "-1";
             }
         }
         else { //token is a number

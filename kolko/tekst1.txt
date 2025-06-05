@@ -1,0 +1,20 @@
+globalny liczba x=2
+globalny liczba y=2
+globalny liczba licznik=0
+globalny liczba co=0
+globalny liczba wynik=0
+ustawwielkoscmapy[13, 13]
+ustawfps[17]
+wyczysc[]
+linia[0, 0, 13, 0, '-']
+linia[0, 4, 13, 4, '-']
+linia[0, 8, 13, 8, '-']
+linia[0, 12, 13, 12, '-']
+linia[0, 18, 8, 18, '-']
+linia[0, 1, 0, 13, '|']
+linia[4, 1, 4, 13, '|']
+linia[8, 1, 8, 13, '|']
+linia[12, 1, 12, 13, '|']
+globalny liczba p =0
+globalny liczba p[9] =0
+ustawna[x,y,'']

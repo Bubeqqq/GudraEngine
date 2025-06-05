@@ -1,6 +1,2 @@
-ustawwielkoscmapy[10, 20]
-ustawfps[5]
-wyczysc[]
-linia[0, 0, 8, 0, '-']
-linia[0, 8, 18, 8, '-']
-linia[0, 0, 0, 18, '|']
+liczba a = 4+3*sin(2)+6
+logiczny b = nie(5>6)&&(5==7)
