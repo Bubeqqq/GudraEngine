@@ -1,2 +1,0 @@
-liczba a = 4+3*sin(2)+6
-logiczny b = nie(5>6)&&(5==7)

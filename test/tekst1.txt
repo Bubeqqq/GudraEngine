@@ -1,0 +1,2 @@
+liczba x = 2 + sin(3,14)
+wyswietlliczbe[4, 4, x]
