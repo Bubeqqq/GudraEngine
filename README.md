@@ -1,95 +1,214 @@
-Dokumentacja Projektu �GudraEngine"
+﻿Dokumentacja Projektu „GudraEngine"
 
-Wydzia� Matematyki stosowanej
+Wydział Matematyki stosowanej
 
 Informatyka (Profil Praktyczny)
 
 Rok studencki 2024/2025
 
-B�a�ej Skorzysko
+Błażej Skorzysko
 
-Bartosz Wi�cek
+Bartosz Więcek
 
-1.  Opis �GudraEngine"
+1.  Opis „GudraEngine"
 
-**GudraEngine** to prosty silnik stworzony z my�l� o tworzeniu gier
-konsolowych, ale sprawdzi si� r�wnie� w projektach algorytmicznych i
-innych aplikacjach tekstowych. Silnik pozwala u�ytkownikowi utworzy�
-nowy projekt w dowolnie wybranym folderze, a nast�pnie edytowa� trzy
-podstawowe pliki: **start**, **klatka** i **koniec**, kt�re zawieraj�
-kod steruj�cy dzia�aniem aplikacji.
+**GudraEngine** to prosty silnik stworzony z myślą o tworzeniu gier
+konsolowych, ale sprawdzi się również w projektach algorytmicznych i
+innych aplikacjach tekstowych. Silnik pozwala użytkownikowi utworzyć
+nowy projekt w dowolnie wybranym folderze, a następnie edytować trzy
+podstawowe pliki: **start**, **klatka** i **koniec**, które zawierają
+kod sterujący działaniem aplikacji.
 
-Kod pisany jest w dedykowanym j�zyku **C\--**, kt�ry oferuje podstawowe
-elementy potrzebne do programowania: cztery typy danych, obs�ug� tablic,
-instrukcje warunkowe, p�tle, oraz funkcje przyjmuj�ce argumenty i
-zwracaj�ce warto�ci.
+Kod pisany jest w dedykowanym języku **C\--**, który oferuje podstawowe
+elementy potrzebne do programowania: cztery typy danych, obsługę tablic,
+instrukcje warunkowe, pętle, oraz funkcje przyjmujące argumenty i
+zwracające wartości.
 
-a)  /\*Dok�adny opis edytora \*/
+a)  Edytor zawartości plików, oraz menu
 
-b)  J�zyk C\--
+> Klasa Menu odpowiada za menu, edytor plików,
+>
+> tworzenie i otwieranie folderu, oraz plików txt.
 
-- Kod �r�d�owy j�zyka znajduje si� w folderze C\--. Najwa�niejszym
-  komponentem jest klasa Compiler, odpowiedzialna za interpretacj� kodu.
-  Kompilator przetwarza kod linijka po linijce, analizuj�c pierwszy
-  token i podejmuj�c odpowiednie dzia�anie.
-
-<!-- -->
-
-- Wsp�pracuje z czterema klasami pomocniczymi:
+- Menu
 
 <!-- -->
 
-- variableManager -- zarz�dza zmiennymi,
+- Odpowiada za nawigację po programie. Umożliwia wybranie ścieżki
+  utworzenia folderu z plikami txt (gdy folderu o danej nazwie już
+  istnieje, program dodaje znak "\_" do nazwy tak długo, aż będzie
+  możliwe utworzenie folderu), lub wybranie istniejącego (jeśli
+  istnieje). Menu dostosowuje się również do rozmiaru okna konsoli.
 
-- functionManager -- obs�uguje funkcje i ich wywo�ania,
+  - Edytor
+
+    - Pozwala na zmianę zawartości pliku w programie bez konieczności
+      otwierania plików txt za pomocą np. notatnika. Zawartość pliku
+      zostaje wczytana do vectora, którego zawartość następnie możemy
+      edytować, po czym do pliku zostaje zapisany nowy tekst. Każdą
+      linie tekstu można zmienić w dowolnym miejscu bez konieczności
+      zatwierdzania wprowadzonego tekstu klawiszem Enter. Ilość, oraz
+      długość linii jest dopasowywana do rozmiaru okna konsoli, a w
+      przypadku jego zmiany naciśnięcie dowolnego klawisza spowoduje
+      przeskalowanie wyświetlanego tekstu do nowego rozmiaru okna.
+
+b)  Język C\--
+
+- Kod źródłowy języka znajduje się w folderze C\--. Najważniejszym
+  komponentem jest klasa Compiler, odpowiedzialna za interpretację kodu.
+  Kompilator przetwarza kod linijka po linijce, analizując pierwszy
+  token i podejmując odpowiednie działanie.
+
+<!-- -->
+
+- Współpracuje z czterema klasami pomocniczymi:
+
+<!-- -->
+
+- variableManager -- zarządza zmiennymi,
+
+- functionManager -- obsługuje funkcje i ich wywołania,
 
 - calculator -- odpowiada za obliczenia matematyczne i logiczne,
 
-- Logs -- rejestruje b��dy i zatrzymuje wykonanie w przypadku
-  niepowodze�.
+- Logs -- rejestruje błędy i zatrzymuje wykonanie w przypadku
+  niepowodzeń.
 
-> **Szczeg�y dzia�ania:**
+> **Szczegóły działania:**
 
 - **Instrukcja warunkowa jezeli**: sprawdza warunek i pomija kod w
-  nawiasach, je�li nie jest spe�niony.
+  nawiasach, jeśli nie jest spełniony.
 
-- **P�tla dopoki**: zapami�tuje punkt startowy i powtarza blok dop�ki
+- **Pętla dopoki**: zapamiętuje punkt startowy i powtarza blok dopóki
   warunek jest prawdziwy.
 
-- **Deklaracje zmiennych**: s� przetwarzane, je�li linia nie jest
-  instrukcj� ani funkcj�.
+- **Deklaracje zmiennych**: są przetwarzane, jeśli linia nie jest
+  instrukcją ani funkcją.
 
-- **Zarz�dzanie zmiennymi**: ka�da zmienna jest traktowana jak tablica,
+- **Zarządzanie zmiennymi**: każda zmienna jest traktowana jak tablica,
   nawet te proste.
 
 - **Klasa Calculator**
 
-- To kluczowy element j�zyka --- odpowiada za obliczenia. Wykorzystuje
-  algorytm **Shunting Yard** do konwersji wyra�e� do notacji
-  postfiksowej, co umo�liwia obliczanie warto�ci za pomoc� stosu.
-  Obs�uguje zmienne, sta�e oraz wywo�ania funkcji.
+> To kluczowy element języka --- odpowiada za obliczenia. Wykorzystuje
+> algorytm **Shunting Yard** do konwersji wyrażeń do notacji
+> postfiksowej, co umożliwia obliczanie wartości za pomocą stosu.
+> Obsługuje zmienne, stałe oraz wywołania funkcji.
 
-c)  Wst�pne za�o�enia projektu
+c)  Opis klasy Calculator:
 
-> Celem by�o stworzenie gry **Snake** w ca�o�ci w silniku
-> **GudraEngine**, z wykorzystaniem dedykowanego j�zyka. Projekt
-> wymaga�:
+- LoadAsStack
 
-- dynamicznie od�wie�anej mapy,
+> Ten kod służy do rozdzielania wzoru funkcji na pojedyncze słowa
+> kluczowe oraz przygotowuje je do dalszych operacji.
+>
+> • Funkcja addMultiplyBetweenWordAndNumber: Wstawia operator \* między
+> liczbami a literami (np. 2sin(x) → 2 \* sin(x)).
+>
+> • sortMinuses: Przypisuje znaki minus do liczb lub zmiennych (np. -x
+> zamiast + - x).
+>
+> • loadAsStack: Rozdziela wyrażenie na tokeny i przekształca je w stos.
+> Łączy ze sobą liczby, litery oraz inne znaki występujące obok siebie.
 
-- reakcji na wej�cie u�ytkownika,
+- Check
 
-- zmiennych i tablic do przechowywania pozycji w�a,
+> Kod sprawdza poprawność składniową wprowadzonego działania
+> matematycznego, analizując tokeny (liczby, operatory, nawiasy,
+> funkcje) w stosie. Główna funkcja check weryfikuje, czy wyrażenie
+> spełnia reguły składniowe, np. poprawne sparowanie nawiasów,
+> odpowiednie rozmieszczenie operatorów oraz użycie funkcji (np. sin,
+> cos) z otwierającym nawiasem. Funkcje pomocnicze, takie jak isWord,
+> isNumber, czy isOpenBracket, klasyfikują tokeny i identyfikują ich
+> rodzaj, co pozwala dokładnie analizować składnię. Jeśli napotkany
+> zostanie błąd (np. brak nawiasu, nieznana operacja, źle użyta
+> funkcja), program wyświetla błąd.
 
-- obs�ugi klawiszy, warunk�w i p�tli.
+- ShuntingYardAlgorithm
 
-2.  Instrukcja u�ytkownika
+> Zamienia wyrażenie z notacji infiksowej na notację postfiksową.
+> Algorytm używa 3 stosów (wynik, kolejka, funkcja). Iterujemy po każdym
+> wyrażeniu w funkcji. Nazywamy to wyrażenie token.
+>
+> 1\. Jeśli token jest liczbą:
+>
+> • Dodaj go bezpośrednio do wyniku.
+>
+> 2\. Jeśli token jest operatorem:
+>
+> • Jeśli kolejka jest pusta, umieść operator w kolejce.
+>
+> • W przeciwnym razie:
+>
+> -- Porównaj jego priorytet z operatorem na szczycie kolejki.
+>
+> -- Jeśli priorytet operatora w kolejce jest wyższy lub równy, zdejmuj
+> operatory z kolejki i umieszczaj je w wyniku, aż warunek przestanie
+> być spełniony.
+>
+> -- Umieść nowy operator w kolejce.
+>
+> 3\. Jeśli token jest nawiasem otwierającym :
+>
+> • Umieść go w kolejce.
+>
+> 4\. Jeśli token jest nawiasem zamykającym :
+>
+> • Zdejmuj operatory z kolejki i umieszczaj je w kolejce wyjściowej, aż
+> napotkasz nawias otwierający.
+>
+> • Usuń nawias otwierający z kolejki (nie dodawaj go do wyniku).
+>
+> 5\. Po przeanalizowaniu wszystkich tokenów:
+>
+> • Przenieś wszystkie pozostałe operatory z kolejki do wyniku.
+
+- CalculateFunction
+
+> Funkcja CalculateAnswer przechodzi przez wszystkie wyrażenia w
+> działaniu. Liczby przenosi do kolejki. Jeżeli napotka działanie, to
+> pobiera 2 liczby z kolejki i wykonuje odpowiadające działaniu
+> operacje. Wszystkie działania są napisane w pliku Math.cpp. Jeżeli w
+> kolejce jest tylko 1 liczba, zastępuje 2 liczbę słowem „buf" (niektóre
+> działania takie jak np. pierwiastek wymagają tylko 1 liczby). Jeżeli
+> zostały podane 2 liczby, a funkcja potrzebuje tylko 1, liczba ta wraca
+> z powrotem do kolejki przed wynikiem. Pod koniec w kolejce zostaje
+> tylko 1 liczba i jest ona wynikiem danego działania.
+
+- Funkcjonalność
+
+> Dzięki tej klasie program bez problemu potrafi poradzić sobie ze
+> złożonymi działaniami uwzględniając działania +, -, \*, /, ˆ, sin,
+> cos, tan, cot, arcsin, arccos, arctan, arccot, ln, log, abs, pierw
+> oraz działania logiczne &&, \|\|, ==, !=, nie, \>, \<, \>=, \<=.
+>
+> Przykładowe działania:
+>
+> 4+3\*sin(x)+6
+>
+> nie(5\>6) && (5 == 7)
+
+d)  Wstępne założenia projektu
+
+> Celem było stworzenie gry **Snake** w całości w silniku
+> **GudraEngine**, z wykorzystaniem dedykowanego języka. Projekt
+> wymagał:
+
+- dynamicznie odświeżanej mapy,
+
+- reakcji na wejście użytkownika,
+
+- zmiennych i tablic do przechowywania pozycji węża,
+
+- obsługi klawiszy, warunków i pętli.
+
+2.  Instrukcja użytkownika
 
 > **a) Instrukcje**
 
 - **jezeli(warunek)**
 
-> Wykonuje kod w bloku, je�li warunek jest prawdziwy.
+> Wykonuje kod w bloku, jeśli warunek jest prawdziwy.
 >
 > jezeli(a \> 5)
 >
@@ -101,7 +220,7 @@ c)  Wst�pne za�o�enia projektu
 
 - **dopoki(warunek)**
 
-> Powtarza kod tak d�ugo, jak warunek jest spe�niony.
+> Powtarza kod tak długo, jak warunek jest spełniony.
 >
 > dopoki(a \> 6)
 >
@@ -113,7 +232,7 @@ c)  Wst�pne za�o�enia projektu
 >
 > **b) Zmienne**
 >
-> Dost�pne typy danych:
+> Dostępne typy danych:
 
 - liczba --- np. 1, 2, 5
 
@@ -137,14 +256,14 @@ c)  Wst�pne za�o�enia projektu
 >
 > **Zmienne globalne:**
 >
-> Aby zmienna zachowa�a warto�� mi�dzy plikami, nale�y doda� modyfikator
+> Aby zmienna zachowała wartość między plikami, należy dodać modyfikator
 > globalny:
 >
 > globalny liczba a = 1
 >
 > **c) Tablice**
 >
-> Tablice tworzy si� automatycznie poprzez przypisanie warto�ci do
+> Tablice tworzy się automatycznie poprzez przypisanie wartości do
 > indeksu:
 >
 > liczba a = 1
@@ -157,63 +276,82 @@ c)  Wst�pne za�o�enia projektu
 >
 > **d) Funkcje**
 >
-> Funkcje wywo�uje si� przez nazw� i nawiasy z parametrami:
+> Funkcje wywołuje się przez nazwę i nawiasy z parametrami:
 >
 > nazwa_funkcji\[parametr1, parametr2\]
 >
 > **Lista funkcji:**
 
-+--------------+-------------------------+-----------------------------------------------------------+  
-|              | **Nazwa**               | **Dzia�anie**                                             |  
-+==============+=========================+===================================+=======================+  
-|              | klawisz\[\'A\'\]        | Zwraca prawda je�li klawisz jest naci�ni�ty               |  
-+--------------+-------------------------+-----------------------------------------------------------+  
-|              | ustawna\[x, y, z\]      | Ustawia znak z na mapie w pozycji (x, y)                  |  
-+--------------+-------------------------+-----------------------------------------------------------+  
-|              | zakoncz\[\]             | Ko�czy dzia�anie programu                                 |  
-+--------------+-------------------------+-----------------------------------+-----------------------+  
-| wyczysc\[\]                            | Czy�ci ekran/map�                 |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| ustawfps\[fps\]                        | Ustawia liczb� klatek na sekund�  |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| ustawwielkoscmapy\[szer, wys\]         | Ustawia rozmiar mapy              |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| znakna\[x, y\]                         | Zwraca znak z pozycji (x, y)      |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| linia\[x1, y1, x2, y2, z\]             | Rysuje lini� znakiem z            |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| wstaw\[t, i, v\]                       | Wstawia warto�� v w indeksie i    |                       |  
-|                                        | tablicy t                         |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| usun\[t, i\]                           | Usuwa element i z tablicy t       |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| rozmiar\[t\]                           | Zwraca d�ugo�� tablicy t          |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| losowa\[min, max\]                     | Zwraca losow� warto�� z zakresu   |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
-| wyswietlliczbe\[x, y, l\]              | Wy�wietla liczb� l na mapie od    |                       |  
-|                                        | (x, y)                            |                       |  
-+----------------------------------------+-----------------------------------+-----------------------+  
+| **Nazwa** | **Działanie** |
+| :--- | :--- |
+| `klawisz['A']` | Zwraca prawda jeśli klawisz jest naciśnięty |
+| `ustawna[x, y, z]` | Ustawia znak z na mapie w pozycji (x, y) |
+| `zakoncz[]` | Kończy działanie programu |
+| `wyczysc[]` | Czyści ekran/mapę |
+| `ustawfps[fps]` | Ustawia liczbę klatek na sekundę |
+| `ustawwielkoscmapy[szer, wys]` | Ustawia rozmiar mapy |
+| `znakna[x, y]` | Zwraca znak z pozycji (x, y) |
+| `linia[x1, y1, x2, y2, z]` | Rysuje linię znakiem z |
+| `wstaw[t, i, v]` | Wstawia wartość v w indeksie i tablicy t |
+| `usun[t, i]` | Usuwa element i z tablicy t |
+| `rozmiar[t]` | Zwraca długość tablicy t |
+| `losowa[min, max]` | Zwraca losową wartość z zakresu |
+| `wyswietlliczbe[x, y, l]` | Wyświetla liczbę l na mapie od (x, y) |
+
+e)  Edytor
+
+- Aby poruszać się po zawartości tekstu należy używać strzałek
+
+- W celu zapisania zmian należy nacisnąć przycisk Escape
+
+- Edytor posiada podstawowe funkcjonalności jak przejście do nowej linii
+  klawiszem Enter oraz usunięcie znaków przy użyciu klawisza Shift.
+  Klawisz Tab nie ma żadnej funkcjonalności.
+
+- Dostępne są tylko podstawowe litery, więc np. litera ą nie działa
+
+f)  Menu
+
+- W celu poruszania się po menu należy użyć strzałek. Aby zatwierdzić
+  wybraną opcje należy nacisnąć klawisz Enter.
+
+g)  Odtwarzanie projektu
+
+> Projekt można wyłączyć w każdym momencie naciskając klawisz ESC.
+> Reszta musi zostać napisana za pomocą kodu.
 
 3.  Ciekawostki
 
-- Nazwa j�zyka **C\--** to �artobliwa kontra do j�zyka C++, gdzie ++
-  sugeruje rozw�j -- tutaj mamy \--, czyli uproszczenie.
+- Nazwa języka **C\--** to żartobliwa kontra do języka C++, gdzie ++
+  sugeruje rozwój -- tutaj mamy \--, czyli uproszczenie.
 
-- Cho� j�zyk nie jest szybki (ok. 20 000 instrukcji/sekund�), sprawdza
-  si� w grach konsolowych.
+- Choć język nie jest szybki (ok. 20 000 instrukcji/sekundę), sprawdza
+  się w grach konsolowych.
 
-- Pierwsze testy wykonalno�ci projektu odby�y si� dopiero po 2
-  miesi�cach prac.
+- Pierwsze testy wykonalności projektu odbyły się dopiero po 2
+  miesiącach prac.
 
-- Pierwszym dzia�aj�cym programem by� klasyczny **Snake**.
+- Pierwszym działającym programem był klasyczny **Snake**.
 
-- Do debugowania u�ywano funkcji wywal, kt�ra dzieli�a przez 0 i celowo
-  wywo�ywa�a b��d.
+- Do debugowania używano funkcji wywal, która dzieliła przez 0 i celowo
+  wywoływała błąd.
 
 4.  Posumowanie i wnioski
 
-> GudraEngine w pe�ni zrealizowa� nasze za�o�enia projektowe. Uda�o si�
-> stworzy� j�zyk, edytor i silnik pozwalaj�cy na tworzenie dynamicznych
-> gier konsolowych. Stworzenie gry Snake w naszym w�asnym j�zyku by�o
-> ambitnym celem -- i zosta� on osi�gni�ty.
+> GudraEngine w pełni zrealizował nasze założenia projektowe. Udało się
+> stworzyć język, edytor i silnik pozwalający na tworzenie dynamicznych
+> gier konsolowych. Stworzenie gry Snake w naszym własnym języku było
+> ambitnym celem -- i został on osiągnięty. Mimo tego, że udało nam się
+> osiągnąć nam cel, niektóre aspekty nie zostały ukończone. Nieukończone
+> plany:
+
+- Funkcja importująca zdjęcia w formacie ASCII oraz wyświetlająca je w
+  podanym miejscu,
+
+- Deklarowanie swoich funkcji,
+
+- Funkcje odtwarzające dźwięki,
+
+- Funkcje pozwalające na zmienianie koloru wyświetlanych części mapy,
+
+- Dodatkowa konsola do wyświetlania wiadomości za pomocą kodu
